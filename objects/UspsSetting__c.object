@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>USPS Web Tools API</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ProductionBaseUrl__c</fullName>
+        <defaultValue>&apos;http://production.shippingapis.com&apos;</defaultValue>
+        <description>HTTP/HTTPS protocols are used for exchange of data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HTTP/HTTPS protocols are used for exchange of data</inlineHelpText>
+        <label>Production Base URL</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SecureBaseUrl__c</fullName>
+        <defaultValue>&apos;https://secure.shippingaps.com&apos;</defaultValue>
+        <description>Certain APIs have Personally Identifiable Information (PII) that requires the use of secure HTTP connections under USPS policies</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Certain APIs have Personally Identifiable Information (PII) that requires the use of secure HTTP connections under USPS policies</inlineHelpText>
+        <label>Secure Base URL</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserId__c</fullName>
+        <description>USERID attribute used for API authentication</description>
+        <externalId>false</externalId>
+        <inlineHelpText>USERID attribute used for API authentication</inlineHelpText>
+        <label>User ID</label>
+        <length>40</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>USPS Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>
