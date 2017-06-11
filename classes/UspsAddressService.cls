@@ -1,14 +1,13 @@
 global class UspsAddressService {
 	
-	global UspsAddressValidateResponse__c validate(UspsAddressValidateRequest__c req) {
-		XmlService xml = XmlService.getInstance();
+	global UspsAddressValidateResponse validate(UspsAddressValidateRequest req) {
+		UspsService service = UspsService.getInstance();
 		
 		HttpRequest httpReq = new HttpRequest();
-		httpReq.setBody(xml.serialize(req));
+		// httpReq.setBody();
 		
 		HttpResponse httpRes = new Http().send(httpReq);
 		
-		return (UspsAddressValidateResponse__c)xml.deserialize(
-				httpRes.getBody(), UspsAddressValidateResponse__c.sobjectType);
+		return UspsAddressValidateResponse.newInstance(httpRes.getBody());
 	}
 }
